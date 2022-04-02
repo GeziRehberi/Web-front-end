@@ -127,9 +127,9 @@ export default function SigninPage() {
             </div>
           </form>
           <div className="flex items-center mt-3 justify-center">
-            <button
-              className={"justify-center text-blue-500 hover:underline"}
-            ></button>
+            <button className={"justify-center text-blue-500 hover:underline"}>
+              <a href="/">Log in</a>
+            </button>
           </div>
         </div>
       </div>
