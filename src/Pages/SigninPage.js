@@ -5,11 +5,44 @@ export default function SigninPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmpassword, setConfirmpassword] = useState("");
+  const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFormErrors(validate(email, password, confirmpassword));
     setIsSubmit(true);
+  };
+
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(email, password);
+    }
+  }, [formErrors]);
+
+  const validate = (email, password, confirmpassword) => {
+    const errors = {};
+    const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i;
+
+    if (!email) {
+      errors.email = "E mail is required!";
+    } else if (!regex.test(email)) {
+      errors.email = "This is not valid e mail format!";
+    }
+    console.log(password);
+    if (!password) {
+      errors.password = "Password is required!";
+    } else if (password.length < 4) {
+      errors.password = "Password must be more than 4 characters!";
+      console.log("execute");
+    } else if (password.length > 12) {
+      errors.password = "Password must be less than 12 characters!";
+    }
+    if (password != confirmpassword) {
+      errors.confirmpassword = "Passwords must be same.";
+    }
+    return errors;
   };
 
   return (
@@ -46,11 +79,11 @@ export default function SigninPage() {
                 "w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
               }
             />
-
+            <p className="text-red-500">{formErrors.email}</p>
             <label className="text-left">E mail:</label>
             <input
               name="email"
-              type="e-mail"
+              type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="e mail"
@@ -58,7 +91,7 @@ export default function SigninPage() {
                 "w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
               }
             />
-
+            <p className="text-red-500">{formErrors.password}</p>
             <label>Password:</label>
             <input
               name="password"
@@ -70,6 +103,7 @@ export default function SigninPage() {
                 "w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
               }
             />
+            <p className="text-red-500">{formErrors.confirmpassword}</p>
             <label>Confirm Password:</label>
             <input
               name="confirmpassword"
