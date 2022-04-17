@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import brand from "../images/brand.jpg";
+import Navbar from "../components/Navbar/Navbar";
+import location from "../images/location.png";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -38,12 +39,13 @@ export default function ForgotPasswordPage() {
 
   return (
     <figure className="w-full grid grid-rows justify-center">
-      <div className="w-48 ml-16">
+      <Navbar />
+      {/* <div className="w-48 ml-32 mt-24">
         <a href="/">
-          <img src={brand} alt="brand" />
+          <img src={location} alt="brand" />
         </a>
-      </div>
-      <div className="w-full max-w-md m-auto bg-white rounded-lg border border-primaryBorder shadow-default py-10 px-1">
+      </div> */}
+      <div className="w-full max-w-md m-auto bg-white rounded-lg border border-primaryBorder shadow-default py-10 px-1 mt-32">
         <div className="text-primary m-6">
           <div className="flex items-center mt-3 justify-center">
             <h1 className="text-2xl font-medium text-primary mt-4 mb-2">
