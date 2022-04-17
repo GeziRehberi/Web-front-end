@@ -1,13 +1,10 @@
 import React from "react";
+import Navbar from "../components/Navbar/Navbar";
 
 export default function ProfilePage() {
   return (
-    // <div className="bg-white h-20 flex justify-center fixed left-0 right-0 top-0 z-10">
-    //   <div className="w-fw mx-auto flex justify-between items-center bg-white">
-
-    //   </div>
-    // </div>
     <div>
+      <Navbar />
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -16,11 +13,9 @@ export default function ProfilePage() {
         referrerpolicy="no-referrer"
       />
 
-      <div class="bg-blue-400 h-20 flex justify-center fixed left-0 right-0 top-0 z-10 pt-24">
+      <div class="h-20 flex justify-center fixed left-0 right-0 top-0 z-10 pt-32">
         <div class="w-full md:w-2/3 lg:w-2/3 border-l border-r">
           <div class="flex p-4 items-center">
-            <div></div>
-
             <div class="ml-8">
               <p class="font-bold">Josh W</p>
             </div>
