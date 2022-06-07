@@ -42,7 +42,7 @@ export default function LoginPage() {
     return errors;
   };
   return (
-    <figure className="w-full grid grid-rows justify-center">
+    <figure className="w-full h-fw bg-blue-400 grid grid-rows justify-center">
       <Navbar />
       {/* <div className="w-48 ml-28">
         <a href="/">

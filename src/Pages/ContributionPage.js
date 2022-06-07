@@ -5,18 +5,18 @@ export default function ContributionPage() {
   return (
     <div>
       <Navbar />
-      <div className="w-48 ml-32 mt-8">
+      <div className="ml-32 mt-8">
         <a href="/"></a>
       </div>
       <div className="w-full mx-auto bg-white rounded-lg border border-primaryBorder shadow-default py-10 px-1">
         <div className="text-primary m-6">
           <div className="flex items-center mt-3 justify-center">
-            <h1 className="text-2xl font-medium text-primary mt-4 mb-2">
+            <h1 className="text-2xl text-blue-800 font-medium text-primary mt-4 mb-2">
               Add New Place
             </h1>
           </div>
 
-          <form>
+          <form className="bg-blue-400 pt-12">
             <div id="formdiv" className="flex w-fw mx-auto space-x-24">
               <div id="biric" className="w-full mt-4">
                 <input
@@ -74,11 +74,6 @@ export default function ContributionPage() {
                       </label>
                     </div>
                   </div>
-                  {/* <div class="flex p-2 space-x-4">
-                    <button class="px-4 py-2 text-white bg-green-300 hover:bg-green-500 rounded shadow-xl">
-                      Select
-                    </button>
-                  </div> */}
                 </div>
               </div>
 
@@ -144,11 +139,9 @@ export default function ContributionPage() {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center mt-3 justify-center">
+                <div className="flex items-center mt-3 justify-center pb-12">
                   <button
-                    className={
-                      "bg-blue-700 hover:bg-blue-500 mt-4 py-2 px-8 text-md text-white rounded border border-blue focus:outline-none focus:border-black"
-                    }
+                    className="bg-blue-700 hover:bg-blue-500 mt-4 py-2 px-8 text-md text-white rounded border border-blue focus:outline-none focus:border-black"
                     value="Signin"
                   >
                     Add Place

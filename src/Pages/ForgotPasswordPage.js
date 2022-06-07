@@ -38,7 +38,7 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <figure className="w-full grid grid-rows justify-center">
+    <figure className="w-full grid grid-rows justify-center h-fw bg-blue-400">
       <Navbar />
       {/* <div className="w-48 ml-32 mt-24">
         <a href="/">
@@ -87,6 +87,11 @@ export default function ForgotPasswordPage() {
               </button>
             </div>
           </form>
+          <div className="flex items-center mt-3 justify-center">
+            <button className={"justify-center text-blue-500 hover:underline"}>
+              <a href="/">Log in</a>
+            </button>
+          </div>
         </div>
       </div>
     </figure>

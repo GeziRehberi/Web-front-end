@@ -47,7 +47,7 @@ export default function SigninPage() {
   };
 
   return (
-    <figure className="w-full grid grid-rows justify-center">
+    <figure className="w-full grid grid-rows justify-center h-fw bg-blue-400">
       <Navbar />
       {/* <div className="w-48 ml-32 mt-24">
         <a href="/">
