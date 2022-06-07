@@ -18,8 +18,7 @@ export default function Navbar() {
           h-full w-full
           hover:bg-[#262a32]
           hover:text-white 
-          font-medium  rounded-none  
-          text-center 
+          font-medium  rounded-none   
           inline-flex items-center 
           justify-center"
             >
@@ -33,12 +32,11 @@ export default function Navbar() {
           h-full w-full
           hover:bg-[#262a32]
           hover:text-white 
-          font-medium  rounded-none  
-          text-center 
+          font-medium  rounded-none   
           inline-flex items-center 
           justify-center"
             >
-              <p>KATKI YAP</p>
+              <p>KATKI</p>
             </a>
           </div>
           <div className="h-24 w-32 flex items-center">
@@ -48,8 +46,7 @@ export default function Navbar() {
           h-full w-full
           hover:bg-[#262a32]
           hover:text-white 
-          font-medium  rounded-none  
-          text-center 
+          font-medium  rounded-none   
           inline-flex items-center 
           justify-center"
             >
