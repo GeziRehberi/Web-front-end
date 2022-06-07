@@ -1,16 +1,61 @@
 import React from "react";
 import location from "../../images/location.png";
-import profileUser from "../../images/ProfileUser.png";
-import search from "../../images/Search.png";
 
 export default function Navbar() {
   return (
-    <div className="bg-gray-300 h-24 flex  justify-center fixed left-0 right-0 top-0 z-10">
-      <div className="w-fw mx-auto justify-between items-center bg-gray-300 grid grid-cols-2 gap-2">
+    <div className="bg-white h-24 flex justify-center fixed left-0 right-0 top-0 z-10">
+      <div className="w-fw mx-auto justify-between items-center bg-white grid grid-cols-3 gap-2">
         <div className="w-48">
           <a href="/">
             <img className="w-20 h-20" src={location} />
           </a>
+        </div>
+        <div id="center" className="flex">
+          <div className="h-24 w-32 flex items-center">
+            <a
+              href="/Maps"
+              className="
+          h-full w-full
+          hover:bg-[#262a32]
+          hover:text-white 
+          font-medium  rounded-none  
+          text-center 
+          inline-flex items-center 
+          justify-center"
+            >
+              <p>HARİTA</p>
+            </a>
+          </div>
+          <div className="h-24 w-32 flex items-center">
+            <a
+              href="/Contribution"
+              className="
+          h-full w-full
+          hover:bg-[#262a32]
+          hover:text-white 
+          font-medium  rounded-none  
+          text-center 
+          inline-flex items-center 
+          justify-center"
+            >
+              <p>KATKI YAP</p>
+            </a>
+          </div>
+          <div className="h-24 w-32 flex items-center">
+            <a
+              href="/Profile"
+              className="
+          h-full w-full
+          hover:bg-[#262a32]
+          hover:text-white 
+          font-medium  rounded-none  
+          text-center 
+          inline-flex items-center 
+          justify-center"
+            >
+              <p>PROFİL</p>
+            </a>
+          </div>
         </div>
         <div class="flex justify-center ml-64">
           <div class="flex md:order-2">
@@ -32,7 +77,7 @@ export default function Navbar() {
               <input
                 type="text"
                 id="search-icon"
-                class="block p-3 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="block p-3 pl-10 w-48 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Search any place..."
               ></input>
             </div>
