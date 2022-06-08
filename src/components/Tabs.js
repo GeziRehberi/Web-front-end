@@ -55,7 +55,7 @@ const Tabs = ({ color }) => {
                   </p>
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <div className="flex flex-auto">
+                  <div className="flex flex-wrap space-y-12">
                     <div className="pr-48">
                       <img
                         className="w-72 ml-12 rounded-lg"
@@ -68,7 +68,7 @@ const Tabs = ({ color }) => {
                         <div className="text-[#45413E]">
                           Notre Dame Katedrali Paris, Fransa'da bulunan dünyaca
                           ünlü bir katedraldir. Meryem Ana'ya ithafen
-                          isimlendirilmiştir. Gotik yapı Île de la Cité'nin doğu
+                          isimlendirilmiştir. Gotik yapı ile de la Cité'nin doğu
                           kısmında, Paris'in diğer tüm önemli yapıları gibi
                           Seine Nehri'nin kıyısında bulunur. Girişi batıya
                           bakar.
@@ -92,6 +92,41 @@ const Tabs = ({ color }) => {
                           olan Eyfel Kulesi, yılda 6 milyon turist çeker. 2002
                           yılında toplam ziyaretçi sayısı 200 milyona
                           ulaşmıştır.
+                        </div>
+                      </div>
+                    </div>
+                    <div className="pr-48">
+                      <img
+                        className="w-72 ml-12 rounded-lg"
+                        src="https://static.birgun.net/resim/haber-detay-resim/2022/05/23/starbucks-rusya-dan-cikma-karari-aldi-1019330-5.jpg"
+                      ></img>
+                      <div className="pt-4 px-12">
+                        <p className="text-[#011847] font-bold text*xl mt-2">
+                          Starbucks Coffea
+                        </p>
+                        <div className="text-[#45413E]">
+                          Starbucks, Amerikalı kahve dükkânları zinciridir.
+                          Merkezi Seattle, Washington'dadır. Starbucks, adını
+                          Moby Dick'teki Starbuck adlı karakterden alır ve
+                          simgesi bir denizkızıdır. Türkiye'de ilk şubesini 2003
+                          yılında İstanbul'da Bağdat Caddesi'ne açmıştır.
+                        </div>
+                      </div>
+                    </div>
+                    <div className="pr-48">
+                      <img
+                        className="w-72 ml-12 rounded-lg"
+                        src="https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1340000/1341844.jpg"
+                      ></img>
+                      <div className="pt-4 px-12">
+                        <p className="text-[#011847] font-bold text*xl mt-2">
+                          Ayasofya
+                        </p>
+                        <div className="text-[#45413E]">
+                          Ayasofya veya resmî olarak Ayasofya-i Kebîr Câmi-i
+                          Şerîfi, eskiden Kutsal Bilgelik Kilisesi ve Ayasofya
+                          Müzesi, İstanbul'da yer alan bir cami, eski bazilika,
+                          katedral ve müze.
                         </div>
                       </div>
                     </div>
