@@ -6,7 +6,6 @@ export default function ProfilePage() {
   return (
     <div>
       <Navbar />
-
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -15,19 +14,14 @@ export default function ProfilePage() {
         referrerpolicy="no-referrer"
       />
 
-      <div class="w-full h-20 flex justify-center fixed left-0 right-0 top-0 z-10 pt-32 ">
+      <div class="w-full h-20 flex justify-center left-0 right-0 top-0 z-10 pt-48 bg-blue-300">
         <div class="w-full md:w-2/3 lg:w-2/3 border-l border-r">
-          <div class="flex p-4 items-center">
-            <div class="ml-8">
-              <p class="font-bold">Josh W</p>
-            </div>
-          </div>
-
-          <div class="flex justify-between">
-            <div class="rounded-full border-4 border-white inline-block -mt-16 w-32 ml-3">
+          <div class="flex justify-between ">
+            <div class="">
               <img
-                class="w-32 rounded-full"
-                src="https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg"
+                class="inline object-cover w-32 h-32 mt-2 rounded-full"
+                src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                alt="Profile image"
               />
             </div>
 
