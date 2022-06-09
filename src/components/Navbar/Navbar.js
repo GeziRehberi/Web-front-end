@@ -1,9 +1,21 @@
 import React from "react";
+import PlacesAutocomplete from "react-places-autocomplete/dist/PlacesAutocomplete";
 import location from "../../images/location.png";
+import scriptLoader from "react-async-script-loader";
 
-export default function Navbar() {
+function Navbar() {
+  const [address, setAddress] = React.useState("");
+
+  const handleChange = (value) => {
+    setAddress(value);
+  };
+
+  const handleSelect = (value) => {
+    setAddress(value);
+  };
+
   return (
-    <div className="bg-white h-24 flex justify-center fixed left-0 right-0 top-0 z-10">
+    <div className="z-10 bg-white h-24 flex justify-center fixed left-0 right-0 top-0">
       <div className="w-fw mx-auto justify-between items-center bg-white grid grid-cols-3 gap-2">
         <div className="w-48">
           <a href="/">
@@ -71,12 +83,48 @@ export default function Navbar() {
                   ></path>
                 </svg>
               </div>
-              <input
-                type="text"
-                id="search-icon"
-                class="block p-3 pl-10 w-48 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Search any place..."
-              ></input>
+              <PlacesAutocomplete
+                value={address}
+                onChange={handleChange}
+                onSelect={handleSelect}
+              >
+                {({
+                  getInputProps,
+                  suggestions,
+                  getSuggestionItemProps,
+                  loading,
+                }) => (
+                  <div className="static">
+                    <input
+                      {...getInputProps({
+                        placeholder: "Search any place...",
+                      })}
+                      type="text"
+                      id="search-icon"
+                      class="block p-3 pl-10 w-48 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Search any place..."
+                    ></input>
+                    <div>
+                      {loading && (
+                        <div className="absolute child">loading...</div>
+                      )}
+                      {suggestions.map((suggestions) => {
+                        const style = suggestions.active
+                          ? { backgroundColor: "#a83232", cursor: "pointer" }
+                          : { backgroundColor: "#ffffff", cursor: "pointer" };
+
+                        return (
+                          <div
+                            {...getSuggestionItemProps(suggestions, { style })}
+                          >
+                            {suggestions.description}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+              </PlacesAutocomplete>
             </div>
           </div>
         </div>
@@ -84,3 +132,7 @@ export default function Navbar() {
     </div>
   );
 }
+
+export default scriptLoader([
+  "https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAP_API}&libraries=places",
+])(Navbar);
