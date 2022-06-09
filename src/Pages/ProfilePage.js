@@ -16,10 +16,10 @@ export default function ProfilePage() {
 
       <div class="w-full h-20 flex justify-center left-0 right-0 top-0 z-10 pt-48 bg-blue-300">
         <div class="w-full md:w-2/3 lg:w-2/3 border-l border-r">
-          <div class="flex justify-between ">
+          <div class="flex justify-between">
             <div class="">
               <img
-                class="inline object-cover w-32 h-32 mt-2 rounded-full"
+                class="inline object-cover w-32 h-32 mt-2 rounded-full cursor-pointer"
                 src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
                 alt="Profile image"
               />
@@ -36,7 +36,7 @@ export default function ProfilePage() {
 
           <div class="ml-3">
             <p class="font-bold text-lg">Furkan Yilmaz</p>
-            <p class="text-gray-500">@fy</p>
+            <p class="text-gray-500">@furkanyilmaz</p>
           </div>
 
           <div class="px-3 mt-3">
